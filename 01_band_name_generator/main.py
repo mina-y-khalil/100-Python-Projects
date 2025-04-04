@@ -7,7 +7,9 @@ print ("welcome to band name generator")
 
 
 #the code in one line
-band_name = ("your band name is: " + input ("what is your country name? ") + input ("what is your pet name? "))
+band_name = ("your band name is: " + input ("what is your country name?\n ") + input ("what is your pet name? \n"))
 
 print (band_name)
 
+
+# Note: It might be better to assign each input to a separate variable for easier use later, but here I was aiming to keep everything neat and clean.
