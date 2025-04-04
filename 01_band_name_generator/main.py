@@ -7,4 +7,7 @@ print ("welcome to band name generator")
 
 
 #the code in one line
-print("your band name is: " + input ("what is your country name? ") + input ("what is your pet name? "))
+band_name = ("your band name is: " + input ("what is your country name? ") + input ("what is your pet name? "))
+
+print (band_name)
+
