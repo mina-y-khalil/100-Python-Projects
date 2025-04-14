@@ -18,7 +18,7 @@ if height >= 120:
     else:
         bill = adult_tickets
         print(f"Adult tickets are ${bill}")
-    wants_photo = input(f"Do you want to have a photo take for extra ${picture_price}? Type y for yes and n for No. ")
+    wants_photo = input(f"Do you want to have a photo take for extra ${picture_price}? Type y for yes and n for No. ").lower()
     if wants_photo == "y":
         print(f"Your total bill now is ${bill+picture_price}")
     else:
