@@ -1,5 +1,6 @@
 print ("welcome to the Roller Coaster ")
 height = int(input("what is the height? "))
+age = int(input("what is your age? "))
 # price list
 bill = 0
 adult_tickets = 25
@@ -9,10 +10,10 @@ picture_price = 3
 
 # nested if
 if height >= 120:
-    if (int(input("what is your age? "))) <= 12:
+    if age <= 12:
         bill = child_tickets
         print(f"Child tickets are ${bill}")
-    elif height <= 18:
+    elif age <= 18:
         bill = youth_tickets
         print(f"Youth tickets are ${bill}")
     else:
