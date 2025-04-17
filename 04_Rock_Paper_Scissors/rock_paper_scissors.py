@@ -51,5 +51,5 @@ elif computer_choice > user_choice:
     print("You lose!  🙃")
 elif user_choice > computer_choice:
     print("You win! 🥳")
-elif computer_choice == user_choice:
+elif computer_choice == user_choice: #I didn’t use “else” here because it will never be executed.
     print("It's a draw!")
