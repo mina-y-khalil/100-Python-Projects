@@ -19,15 +19,25 @@ for position in range (0,len(secret_word)):
     placeholder += "_"
 print(placeholder)
 
-user_input = str(input(f"what is your guess? ")).lower()
-main_score = 10
-balance = main_score
-display = ""
+# main_score = 10
+# balance = main_score
 
-for letter in secret_word:
-    if letter == user_input:
-        display += letter
-    else:
-        display += "_"
+game_over = False
+correct_letters = []
 
-print(display)
+while not game_over:
+    user_input = str(input(f"what is your guess? ")).lower()
+    display = ""
+    for letter in secret_word:
+        if letter == user_input:
+            display += letter
+            correct_letters.append(user_input)
+        elif letter in correct_letters:
+            display += letter
+        else:
+            display += "_"
+    print(display)
+
+    if "_" not in display:
+        game_over = True
+        print(f"\n🎉 Congratulations! You guessed it right: {secret_word}")
