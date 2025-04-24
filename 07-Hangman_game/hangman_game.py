@@ -13,14 +13,117 @@ animals_list = [
 secret_word = random.choice(animals_list)
 print(secret_word)
 
+
 # creating a placeholder with the same numbers of blanks as secret_word
 placeholder = ""
 for position in range (0,len(secret_word)):
     placeholder += "_"
 print(placeholder)
 
-# main_score = 10
-# balance = main_score
+hangman_stages = [
+    '''
+     +---+
+     |   |
+         |
+         |
+         |
+         |
+    =========''',  # 10 lives left
+
+    '''
+     +---+
+     |   |
+     O   |
+         |
+         |
+         |
+    =========''',  # 9 lives
+
+    '''
+     +---+
+     |   |
+     O   |
+     |   |
+         |
+         |
+    =========''',  # 8 lives
+
+    '''
+     +---+
+     |   |
+     O   |
+    /|   |
+         |
+         |
+    =========''',  # 7 lives
+
+    '''
+     +---+
+     |   |
+     O   |
+    /|\\  |
+         |
+         |
+    =========''',  # 6 lives
+
+    '''
+     +---+
+     |   |
+     O   |
+    /|\\  |
+    /    |
+         |
+    =========''',  # 5 lives
+
+    '''
+     +---+
+     |   |
+     O   |
+    /|\\  |
+    / \\  |
+         |
+    =========''',  # 4 lives
+
+    '''
+     +---+
+     |   |
+    [O   |
+    /|\\  |
+    / \\  |
+         |
+    =========''',  # 3 lives
+
+    '''
+     +---+
+     |   |
+    [O]  |
+    /|\\  |
+    / \\  |
+         |
+    =========''',  # 2 lives
+
+    '''
+     +---+
+     |   |
+    [O]_ |
+    /|\\  |
+    / \\  |
+         |
+    =========''',  # 1 life
+
+    '''
+     +---+
+     |   |
+    [O]_/
+    /|\\  |
+    / \\  |
+         |
+    =========''',  # 0 lives - game over
+]
+
+main_score = len(hangman_stages) -1
+# print(main_score)
+balance = main_score
 
 game_over = False
 correct_letters = []
@@ -37,6 +140,16 @@ while not game_over:
         else:
             display += "_"
     print(display)
+
+    if user_input not in secret_word:
+        balance -= 1
+        print(f"Wrong guess 😭 Remaining score: {balance}/{main_score}")
+        print(hangman_stages[main_score-balance])
+        if balance == 0:
+            game_over = True
+            print(hangman_stages[-1])
+            print(f"\n💀 Game Over! The correct word was: {secret_word}")
+
 
     if "_" not in display:
         game_over = True
