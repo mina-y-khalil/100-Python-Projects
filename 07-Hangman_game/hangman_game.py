@@ -1,125 +1,19 @@
 #ranomly choose a word from the animals list
 import random
+from hangman_words import animals_list
+from hangman_art import hangman_stages
 #welcome message
 print('''Hi there, let's play the Hangman game! If you're not familiar with the rules, you can visit the following link to learn how to play: "https://en.wikipedia.org/wiki/Hangman_(game)".\n
 We'll be guessing the name of an animal. You need to guess one letter from the animal's name. Let's get started!''')
 
-animals_list = [
-    "cat", "dog", "cow", "pig", "fox",
-    "bat", "ant", "bee", "dolphin", "rat",
-    "owl", "duck", "goat", "frog", "fish",
-    "bear", "deer", "lion", "elephant", "crab"
-]
 secret_word = random.choice(animals_list)
 print(secret_word)
-
 
 # creating a placeholder with the same numbers of blanks as secret_word
 placeholder = ""
 for position in range (0,len(secret_word)):
     placeholder += "_"
 print(placeholder)
-
-hangman_stages = [
-    '''
-     +---+
-     |   |
-         |
-         |
-         |
-         |
-    =========''',  # 10 lives left
-
-    '''
-     +---+
-     |   |
-     O   |
-         |
-         |
-         |
-    =========''',  # 9 lives
-
-    '''
-     +---+
-     |   |
-     O   |
-     |   |
-         |
-         |
-    =========''',  # 8 lives
-
-    '''
-     +---+
-     |   |
-     O   |
-    /|   |
-         |
-         |
-    =========''',  # 7 lives
-
-    '''
-     +---+
-     |   |
-     O   |
-    /|\\  |
-         |
-         |
-    =========''',  # 6 lives
-
-    '''
-     +---+
-     |   |
-     O   |
-    /|\\  |
-    /    |
-         |
-    =========''',  # 5 lives
-
-    '''
-     +---+
-     |   |
-     O   |
-    /|\\  |
-    / \\  |
-         |
-    =========''',  # 4 lives
-
-    '''
-     +---+
-     |   |
-    [O   |
-    /|\\  |
-    / \\  |
-         |
-    =========''',  # 3 lives
-
-    '''
-     +---+
-     |   |
-    [O]  |
-    /|\\  |
-    / \\  |
-         |
-    =========''',  # 2 lives
-
-    '''
-     +---+
-     |   |
-    [O]_ |
-    /|\\  |
-    / \\  |
-         |
-    =========''',  # 1 life
-
-    '''
-     +---+
-     |   |
-    [O]_/
-    /|\\  |
-    / \\  |
-         |
-    =========''',  # 0 lives - game over
-]
 
 main_score = len(hangman_stages) -1
 # print(main_score)

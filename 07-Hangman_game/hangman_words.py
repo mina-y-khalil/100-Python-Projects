@@ -1,0 +1,23 @@
+animals_list = [
+    "cat", "dog", "cow", "pig", "fox",
+    "bat", "ant", "bee", "dolphin", "rat",
+    "owl", "duck", "goat", "frog", "fish",
+    "bear", "deer", "lion", "elephant", "crab",
+    "horse", "chicken", "sheep", "rabbit", "hamster",
+    "guinea pig", "parrot", "canary", "turtle", "snake",
+    "lizard", "squirrel", "chipmunk", "beaver", "otter",
+    "seal", "whale", "shark", "jellyfish", "starfish",
+    "eagle", "hawk", "robin", "sparrow", "pigeon",
+    "swan", "goose", "turkey", "peacock", "penguin",
+    "ostrich", "kangaroo", "koala", "zebra", "giraffe",
+    "monkey", "gorilla", "chimpanzee", "orangutan", "lemur",
+    "tiger", "leopard", "jaguar", "cheetah", "hyena",
+    "wolf", "coyote", "jackal", "badger", "skunk",
+    "raccoon", "opossum", "mole", "shrew", "hedgehog",
+    "camel", "llama", "alpaca", "donkey", "mule",
+    "buffalo", "bison", "elk", "moose", "rhinoceros",
+    "hippopotamus", "crocodile", "alligator", "turtle", "tortoise",
+    "salmon", "trout", "cod", "tuna", "herring",
+    "butterfly", "mosquito", "fly", "ladybug", "grasshopper",
+    "spider", "scorpion", "worm", "snail", "slug"
+]
