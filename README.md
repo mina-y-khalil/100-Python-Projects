@@ -1,7 +1,7 @@
 # 100-Python-Projects
 
 <p align="center">
-  <img src="https://redeem-innovations.com/wp-content/uploads/2025/04/100_python_project.jpg" alt="Landing Page" />
+  <img src="https://redeem-innovations.com/wp-content/uploads/2025/04/100_python_projects.jpg" alt="Landing Page" />
 </p>
 
 <p align="center">
