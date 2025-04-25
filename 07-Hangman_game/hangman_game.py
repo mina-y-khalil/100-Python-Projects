@@ -25,6 +25,8 @@ correct_letters = []
 
 while not game_over:
     user_input = str(input(f"what is your guess? ")).lower()
+    if user_input in correct_letters:
+        print(f"You've already guessed letter '{user_input}' before 😉")
     display = ""
     for letter in secret_word:
         if letter == user_input:
