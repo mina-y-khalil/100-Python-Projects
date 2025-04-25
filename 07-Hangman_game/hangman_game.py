@@ -31,6 +31,7 @@ while not game_over:
     for letter in secret_word:
         if letter == user_input:
             display += letter
+            print(hangman_stages[0])
             correct_letters.append(user_input)
         elif letter in correct_letters:
             display += letter
