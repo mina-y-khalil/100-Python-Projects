@@ -1,8 +1,9 @@
 #ranomly choose a word from the animals list
 import random
 from hangman_words import animals_list
-from hangman_art import hangman_stages
+from hangman_art import hangman_stages, logo
 #welcome message
+print(logo)
 print('''Hi there, let's play the Hangman game! If you're not familiar with the rules, you can visit the following link to learn how to play: "https://en.wikipedia.org/wiki/Hangman_(game)".\n
 We'll be guessing the name of an animal. You need to guess one letter from the animal's name. Let's get started!''')
 
