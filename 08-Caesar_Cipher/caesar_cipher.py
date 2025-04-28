@@ -18,8 +18,16 @@ def encrypt(original_text,shift_amount ):
         print(the_new_message)
 
 
-    # elif direction == "decode":
-
+    elif direction == "decode":
+        for letter in original_text:
+            if letter in alphabet:
+                the_original_index = alphabet.index(letter)
+                the_new_index = the_original_index - shift_amount
+                letter = alphabet[the_new_index]
+                the_new_message += letter
+            else:
+                the_new_message += letter
+        print(the_new_message)
     else:
         print("Please enter a valid value")
 
