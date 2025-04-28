@@ -31,4 +31,4 @@ def encrypt(original_text,shift_amount ):
     else:
         print("Please enter a valid value")
 
-encrypt(text,shift)
+encrypt(original_text=text,shift_amount=shift)
