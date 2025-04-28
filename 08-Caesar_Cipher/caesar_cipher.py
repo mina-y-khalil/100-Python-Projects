@@ -17,6 +17,6 @@ def encrypt(original_text,shift_amount, encode_or_decode ):
             the_new_message += letter
         else:
             the_new_message += letter
-    print(f"Here is the encoded result: {the_new_message}")
+    print(f"Here is the {encode_or_decode}d result: {the_new_message}")
 
 encrypt(original_text=text,shift_amount=shift, encode_or_decode=direction)
