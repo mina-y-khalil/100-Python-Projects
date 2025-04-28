@@ -10,7 +10,7 @@ def encrypt(original_text,shift_amount ):
         for letter in original_text:
             if letter in alphabet:
                 the_original_index = alphabet.index(letter)
-                the_new_index = (the_original_index + shift_amount) % 26
+                the_new_index = (the_original_index + shift_amount) % len(alphabet)
                 letter = alphabet[the_new_index]
                 the_new_message += letter
             else:
@@ -22,7 +22,7 @@ def encrypt(original_text,shift_amount ):
         for letter in original_text:
             if letter in alphabet:
                 the_original_index = alphabet.index(letter)
-                the_new_index = (the_original_index - shift_amount) % 26
+                the_new_index = (the_original_index - shift_amount) % len(alphabet)
                 letter = alphabet[the_new_index]
                 the_new_message += letter
             else:
