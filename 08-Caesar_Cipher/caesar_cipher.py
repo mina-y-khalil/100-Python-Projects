@@ -15,7 +15,7 @@ def encrypt(original_text,shift_amount ):
                 the_new_message += letter
             else:
                 the_new_message += letter
-        print(the_new_message)
+        print(f"Here is the encoded result: {the_new_message}")
 
 
     elif direction == "decode":
@@ -27,7 +27,7 @@ def encrypt(original_text,shift_amount ):
                 the_new_message += letter
             else:
                 the_new_message += letter
-        print(the_new_message)
+        print(f"Here is the decoded result: {the_new_message}")
     else:
         print("Please enter a valid value")
 
