@@ -18,5 +18,22 @@ def encrypt(original_text,shift_amount, encode_or_decode ):
         else:
             the_new_message += letter
     print(f"Here is the {encode_or_decode}d result: {the_new_message}")
-
 encrypt(original_text=text,shift_amount=shift, encode_or_decode=direction)
+
+#restarting the programme:
+should_continue = True
+while should_continue is True :
+    restart = input("Type 'Yes' if you want to go again. Otherwise, type 'No' ").lower()
+    if restart == "no":
+        should_continue = False
+        print("Goodbye 👋")
+    elif restart == "yes":
+        direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+        text = input("Type your message:\n").lower()
+        shift = int(input("Type the shift number:\n"))
+
+        encrypt(original_text=text, shift_amount=shift, encode_or_decode=direction)
+    else:
+        print("we didn't receive a valid input. Goodbye 👋")
+
+
