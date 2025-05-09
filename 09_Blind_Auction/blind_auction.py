@@ -28,5 +28,6 @@ while continue_bidding :
             print(f"The winner is {winner} with a bid of ${highest_bid}.")
 
         print(find_highest_bidder(bids))
-
+    elif should_continue == "yes":
+        print("\n" * 100) #I added this to clean the screen if the user choose to continue
 
