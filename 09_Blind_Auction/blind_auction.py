@@ -27,6 +27,6 @@ while continue_bidding :
                     winner = bidder
             print(f"The winner is {winner} with a bid of ${highest_bid}.")
 
-        print(find_highest_bidder(bids§))
+        print(find_highest_bidder(bids))
 
 
