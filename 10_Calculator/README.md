@@ -1,4 +1,4 @@
-# 🧮 Calculator
+# 🧮 Basic Calculator
 
 <p align="center">
   <img src="https://redeem-innovations.com/wp-content/uploads/2025/05/Calculator.jpg" alt="Landing Page" />
