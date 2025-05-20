@@ -36,6 +36,7 @@ while still_correct:
 
     #Clear the screen
     print("\n" * 20)
+    print(logo)
 
     # check if the user is correct.
     a_follower_count = a_choice["follower_count"]
