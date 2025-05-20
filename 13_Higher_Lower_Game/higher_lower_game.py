@@ -34,6 +34,9 @@ while still_correct:
     print(f"Against B: {format_data(b_choice)}")
     user_choice = (input("Who has the more followers? Type 'A' or 'B' ").lower())
 
+    #Clear the screen
+    print("\n" * 20)
+
     # check if the user is correct.
     a_follower_count = a_choice["follower_count"]
     b_follower_count = b_choice["follower_count"]
