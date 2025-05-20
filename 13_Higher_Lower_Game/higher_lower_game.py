@@ -4,8 +4,12 @@ import random
 
 print(logo)
 still_correct = True
+
 a_choice = random.choice(data)
 b_choice = random.choice(data)
+if a_choice == b_choice:
+    b_choice = random.choice(data)
+
 points = 0
 
 def if_correct():
