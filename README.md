@@ -21,3 +21,10 @@ Welcome to the **100 Python Projects** repository! This collection is a structur
 ---
 
 Stay tuned as we build up to 100 projects — one commit at a time! 🚀
+
+
+## 📘 Course Attribution
+
+These projects were developed during my applied study in:  
+🎓 **_“The Complete Python Pro Bootcamp” by [Angela Yu](https://github.com/angelabauer) – [London App Brewery](https://github.com/appbrewery)_**
+The course provided structure and guidance, but each implementation is my own. I’ve modified, extended, and refactored many of them to strengthen my understanding and prepare for real-world scenarios.
