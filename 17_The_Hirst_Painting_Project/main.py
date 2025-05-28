@@ -38,8 +38,7 @@ timmy_the_turtle = Turtle()
 #     draw_shape(shape_side_n)
 #
 #
-# screen = Screen()
-# screen.exitonclick()
+
 #
 #NWES
 turtle.colormode(255)
@@ -47,15 +46,31 @@ def random_color ():
     r = random.randint(0,255)
     g = random.randint(0,255)
     b = random.randint(0,255)
-    random_color = (r , g, b)
-    return random_color
+    color = (r , g, b)
+    return color
 
 
-directions = [0,90,180,270]
-timmy_the_turtle.pensize(15)
-timmy_the_turtle.speed(10)
+# directions = [0,90,180,270]
+# timmy_the_turtle.pensize(15)
+timmy_the_turtle.speed(30)
 
-for _ in range(200):
-    timmy_the_turtle.forward(30)
-    timmy_the_turtle.color(random_color())
-    timmy_the_turtle.setheading(random.choice(directions))
+# for _ in range(200):
+#     timmy_the_turtle.forward(30)
+#     timmy_the_turtle.color(random_color())
+#     timmy_the_turtle.setheading(random.choice(directions))
+#
+
+#making a spirograph using turtle:
+def draw_spirograph (size_of_gab):
+    for _ in range (int(360 / size_of_gab)):
+        timmy_the_turtle.color(random_color())
+        timmy_the_turtle.circle(100)
+        timmy_the_turtle.setheading(timmy_the_turtle.heading() + size_of_gab)
+
+draw_spirograph(5)
+
+
+
+
+screen = Screen()
+screen.exitonclick()
