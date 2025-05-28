@@ -8,12 +8,18 @@ def square ():
         timmy_the_turtle.forward(100)
         timmy_the_turtle.right(90)
 
+# square()
+# timmy_the_turtle.forward(200)
+# square()
+
+def star ():
+    for _ in range (5):
+        timmy_the_turtle.right(72)
+        timmy_the_turtle.forward(100)
+        timmy_the_turtle.right(72)
 
 
-square()
-timmy_the_turtle.forward(200)
-square()
-
+star()
 
 
 screen = Screen()
