@@ -19,7 +19,16 @@ def star ():
         timmy_the_turtle.right(72)
 
 
-star()
+# star()
+
+def draw_shape(num_sides):
+    for _ in range (num_sides):
+        angel = 360 / num_sides
+        timmy_the_turtle.forward(100)
+        timmy_the_turtle.right(angel)
+
+for shape_side_n in range (3, 11):
+    draw_shape(shape_side_n)
 
 
 screen = Screen()
