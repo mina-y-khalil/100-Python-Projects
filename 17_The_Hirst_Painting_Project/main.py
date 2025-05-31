@@ -1,5 +1,5 @@
 import random
-import turtle
+import turtle as turtle_module
 from turtle import Turtle, Screen
 import colorgram
 
@@ -19,8 +19,12 @@ import colorgram
 #     rgb_colors.append(new_color)
 #
 # print(rgb_colors)
+
+turtle_module.colormode(255)
+tim = turtle_module.Turtle()
 color_list = [(120, 163, 215), (204, 161, 91), (212, 225, 83), (162, 168, 36), (118, 234, 154), (209, 125, 192), (204, 65, 177), (114, 200, 125), (181, 238, 203), (108, 92, 218), (233, 224, 184), (146, 93, 39), (192, 217, 239), (162, 55, 134), (176, 169, 237), (71, 177, 74), (229, 159, 216), (232, 196, 221), (77, 92, 160), (196, 227, 13), (220, 85, 59), (66, 127, 74), (112, 223, 237), (150, 17, 117), (65, 42, 154), (60, 164, 181), (78, 89, 21), (145, 35, 21), (247, 166, 151), (79, 27, 76)]
 
+tim.dot(20, random.choice(color_list))
 
 
 
@@ -102,5 +106,5 @@ color_list = [(120, 163, 215), (204, 161, 91), (212, 225, 83), (162, 168, 36), (
 #
 #
 #
-# screen = Screen()
-# screen.exitonclick()
+screen = Screen()
+screen.exitonclick()
