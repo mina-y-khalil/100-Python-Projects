@@ -6,19 +6,17 @@ screen = Screen()
 screen.setup(500, 400)
 user_bet = screen.textinput(title="Make your bet", prompt="Which turtle will win the race? Enter a color: ").lower()
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+y_positions = [-70 , -40 , -10 , 20, 50, 80]
 counting = 1
-turtle_name = "tim" + str(counting)
 moving = 10
 
-for turtle in colors:
-    turtle_name = Turtle(shape="turtle")
-    turtle_name.penup()
-    turtle_name.color(turtle)
+for turtle_index in range(0,5):
+    tim = Turtle(shape="turtle")
+    tim.penup()
+    tim.color(colors[turtle_index])
     counting += 1
     # tim.shape("turtle")
-    turtle_name.left(10)
-    turtle_name.setheading(0)
-    turtle_name.goto(x=-230, y=(-100 +int(moving)))
+    tim.goto(x=-230, y=y_positions[turtle_index])
 
 
 
