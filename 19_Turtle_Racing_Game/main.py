@@ -1,7 +1,5 @@
 import random
-import turtle
 from turtle import Turtle, Screen
-import _random
 
 screen = Screen()
 screen.bgcolor("lightblue")
