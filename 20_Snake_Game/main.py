@@ -26,8 +26,13 @@ game_is_on = True
 while game_is_on:
     screen.update()  # Refresh screen once
     time.sleep(0.1)
-    for seg in segments:
-        seg.forward(20)
+    for seg_num in range(len(segments)-1 , 0 , -1): #the first number here is the (start) the second number is the (stop) and the third number is (step)
+        """Moves each segment to the position of the segment in front of it, starting from the tail"""
+        new_x = segments[seg_num-1].xcor()
+        new_y = segments[seg_num-1].ycor()
+        segments[seg_num].goto(new_x, new_y)
+    segments[0].forward(20) #Moves the head (first segment) forward to keep the snake moving
+    # segments[0].left(90)
 
 
 #TODO 03: Create snake food
