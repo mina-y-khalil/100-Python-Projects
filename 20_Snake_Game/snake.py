@@ -1,12 +1,13 @@
 from turtle import Turtle, Screen
 #Constants (written in ALL_CAPS)
 STARTING_POSITIONS  = [(0, 0), (-20, 0), (-40, 0)]
+MOVE_DISTANCE = 10
 
 class Snake:
     def __init__(self):
         self.segments = []
         self.create_snake()
-
+        self.head = self.segments[0]
 
     def create_snake(self):
         """#TODO 01: Create a snake body"""
@@ -25,4 +26,16 @@ class Snake:
             new_x = self.segments[seg_num - 1].xcor()
             new_y = self.segments[seg_num - 1].ycor()
             self.segments[seg_num].goto(new_x, new_y)
-            self.segments[0].forward(20)  # Moves the head (first segment) forward to keep the snake moving
+            self.head.forward(MOVE_DISTANCE)  # Moves the head (first segment) forward to keep the snake moving
+
+    def up(self):
+        self.head.setheading(90)
+
+    def down(self):
+        self.head.setheading(270)
+
+    def left(self):
+        self.head.setheading(180)
+
+    def right(self):
+        self.head.setheading(0)

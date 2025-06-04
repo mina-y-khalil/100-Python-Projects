@@ -9,14 +9,21 @@ screen.bgcolor("black")
 screen.title("Snake Game by: Mina Y, Khalil")
 screen.tracer(0) # Stop auto-refresh
 
-snake = Snake()
+snake = Snake( )
+
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
 
 
 game_is_on = True
 while game_is_on:
     screen.update()  # Refresh screen once
-    time.sleep(0.1)
+    time.sleep(0.05)
 
+    snake.move()
 
 
 #TODO 03: Create snake food
