@@ -17,11 +17,20 @@ class Snake:
         """#TODO 01: Create a snake body"""
         # snake body
         for position in STARTING_POSITIONS:
-            new_segment = Turtle(shape="square")
-            new_segment.penup()
-            new_segment.color("white")
-            new_segment.goto(position)
-            self.segments.append(new_segment)
+            self.add_Segment(position)
+
+
+    def add_Segment(self, position):
+        new_segment = Turtle(shape="square")
+        new_segment.penup()
+        new_segment.color("white")
+        new_segment.goto(position)
+        self.segments.append(new_segment)
+
+    def extend(self):
+        """add a new segment to the snake"""
+        position = self.segments[-1].position()
+        self.add_Segment(position)
 
     def move(self):
         """#TODO 02: Move the snake"""
