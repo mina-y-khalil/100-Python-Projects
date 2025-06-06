@@ -1,6 +1,8 @@
 #TODO 01: Create the screen
 from turtle import Screen, Turtle
 from paddle import Paddle
+from ball import Ball
+import time
 
 screen = Screen()
 screen.bgcolor("black")
@@ -11,7 +13,9 @@ screen.tracer(0)
 
 
 r_paddle = Paddle((350,0))
+#TODO 03: Create another paddle
 l_paddle = Paddle((-350,0))
+ball = Ball()
 
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
@@ -19,8 +23,6 @@ screen.onkey(r_paddle.go_down, "Down")
 screen.onkey(l_paddle.go_up, "w")
 screen.onkey(l_paddle.go_down, "s")
 
-#TODO 03: Create another paddle
-#TODO 04: Create the ball and make it move
 #TODO 05: Detect Collision with wall and bounce
 #TODO 06: Detect when paddle misses
 #TODO 07: Keep Score
@@ -28,6 +30,8 @@ screen.onkey(l_paddle.go_down, "s")
 
 game_is_on = True
 while game_is_on:
+    time.sleep(0.1)
     screen.update()
+    ball.move()
 
 screen.exitonclick()
