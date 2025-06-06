@@ -1,33 +1,23 @@
 #TODO 01: Create the screen
-from ctypes.macholib.dyld import dyld_default_search
 from turtle import Screen, Turtle
+from paddle import Paddle
 
 screen = Screen()
 screen.bgcolor("black")
 screen.setup(width=800,height=600)
 screen.title("The Pong Game")
+screen.tracer(0)
 
-#TODO 02: Create and move a paddle
-paddle = Turtle()
-paddle.shape("square")
-paddle.color("white")
-paddle.shapesize(stretch_wid=5, stretch_len=1)
-paddle.penup()
-paddle.goto(350, 0)
 
-def go_up():
-    new_y = paddle.ycor() +20
-    paddle.goto(paddle.xcor(), new_y)
 
-def go_down():
-    new_y = paddle.ycor() -20
-    paddle.goto(paddle.xcor(), new_y)
+r_paddle = Paddle((350,0))
+l_paddle = Paddle((-350,0))
 
 screen.listen()
-screen.onkey(go_up, "Up")
-screen.onkey(go_down, "Down")
-
-
+screen.onkey(r_paddle.go_up, "Up")
+screen.onkey(r_paddle.go_down, "Down")
+screen.onkey(l_paddle.go_up, "w")
+screen.onkey(l_paddle.go_down, "s")
 
 #TODO 03: Create another paddle
 #TODO 04: Create the ball and make it move
@@ -36,6 +26,8 @@ screen.onkey(go_down, "Down")
 #TODO 07: Keep Score
 
 
-
+game_is_on = True
+while game_is_on:
+    screen.update()
 
 screen.exitonclick()
