@@ -7,11 +7,13 @@ DOWN = 270
 LEFT = 180
 RIGHT = 0
 
-class Snake:
+class Snake(Turtle):
     def __init__(self):
+        super().__init__()
         self.segments = []
         self.create_snake()
         self.head = self.segments[0]
+        self.speed("slow")
 
     def create_snake(self):
         """#TODO 01: Create a snake body"""
@@ -26,6 +28,13 @@ class Snake:
         new_segment.color("white")
         new_segment.goto(position)
         self.segments.append(new_segment)
+
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000,1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
 
     def extend(self):
         """add a new segment to the snake"""
