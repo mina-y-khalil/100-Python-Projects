@@ -5,3 +5,11 @@ with open("my_file.txt") as file: #  This is a better way to remember to close t
 
 with open("new_file.txt", mode="w") as file2:
     file2.write("\nand this is my new message")
+
+
+
+with open("new_file2.txt", mode="w") as file3:
+    file3.write("this is my third test")
+
+with open("../../100-Python-Projects/23_/new_file2.txt", mode="w") as file3:
+    file3.write("this is my third test")
