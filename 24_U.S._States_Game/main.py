@@ -17,5 +17,14 @@
 import pandas
 
 data = pandas.read_csv("weather_data.csv")
+# print(type(data))
 # print(data)
-print(data["temp"])
+# print(data["temp"])
+data_dict = data.to_dict()
+# print(data_dict)
+temp_list = data["temp"].to_list()
+print(temp_list)
+average = round((sum(temp_list) / len(temp_list)), 2)
+print(average)
+print(data["temp"].mean()) #getting the average
+print(data["temp"].max())
