@@ -11,16 +11,20 @@ turtle.shape(img)
 
 data = pandas.read_csv("50_states.csv")
 all_states = data.state.to_list()
+guessed_states = []
 
-user_input = screen.textinput(title="Guess the State", prompt="What is your guess?")
+while len(guessed_states) < 50:
 
-if user_input in all_states:
-    t = Turtle()
-    t.hideturtle()
-    t.penup()
-    state_data = data[data.state == user_input] #getting the row that matches the user input
-    t.goto(state_data.x.item() , state_data.y.item() )
-    t.write(user_input)
+    user_input = screen.textinput(title=f"{len(guessed_states)}/50 States Correct", prompt="What is your guess?").title()
+
+    if user_input in all_states:
+        guessed_states.append(user_input)
+        t = Turtle()
+        t.hideturtle()
+        t.penup()
+        state_data = data[data.state == user_input] #getting the row that matches the user input
+        t.goto(state_data.x.item() , state_data.y.item() )
+        t.write(user_input)
 
 
 
