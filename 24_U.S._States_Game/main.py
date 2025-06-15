@@ -19,8 +19,8 @@ if user_input in all_states:
     t.hideturtle()
     t.penup()
     state_data = data[data.state == user_input] #getting the row that matches the user input
-    t.goto(state_data.x.item , state_data.y.item )
-    t.write(state_data.state)
+    t.goto(state_data.x.item() , state_data.y.item() )
+    t.write(user_input)
 
 
 
