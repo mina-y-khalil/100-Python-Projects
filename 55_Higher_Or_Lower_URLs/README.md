@@ -44,7 +44,7 @@ A dynamic Flask web app that challenges users to guess a random number between 0
 
 | Guess | Result         | Visual |
 |-------|----------------|--------|
-| `/3`  | Too low        | <img src="https://media.giphy.com/media/26BRzozg4TCBXv6QU/giphy.gif" width="150"/> |
+| `/3`  | Too low        | <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG5wbWgzdG9jazAzaDZ1cng2bWdlMDFoOWR3YTcyZWFoenZ3ejlrbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jD4DwBtqPXRXa/giphy.gif" width="150"/> |
 | `/7`  | Too high       | <img src="https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif" width="150"/> |
 | `/5`  | Just right 🎯  | <img src="https://media.giphy.com/media/4T7e4DmcrP9du/giphy.gif" width="150"/> |
 
