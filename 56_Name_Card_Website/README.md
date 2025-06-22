@@ -38,5 +38,5 @@ A simple yet elegant personal portfolio website built using **Flask** and **HTML
 ├── templates/
 │   └── index.html
 │
-└── app.py
+└── main.py
 ```
