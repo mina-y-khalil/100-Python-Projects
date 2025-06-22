@@ -62,3 +62,16 @@ say_hello()
 - **`decorative_function`** is a decorator that wraps the `say_hello()` function, adding a 5-second delay before and after its execution.
 - **`@decorative_function`** is applied to `say_hello()` to modify its behavior.
 
+### 🛠️ How to Edit a Website Directly from Chrome
+
+To edit a website directly in Google Chrome:
+
+1. Open the website in Chrome.
+2. Press `Ctrl + Shift + I` (or right-click and select **Inspect**) to open Developer Tools.
+3. In the Console tab, paste this command:
+   ```javascript
+   document.body.contentEditable = true;
+   ```
+4. You can now freely edit the page content like a normal document.
+5. When finished, right-click on the page and select **Save As** to download it as an `.html` file.
+6. Move the saved file into your project folder for further development.
