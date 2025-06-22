@@ -21,9 +21,9 @@ A simple yet elegant personal portfolio website built using **Flask** and **HTML
 - External resource linking (Google Fonts, favicon, hosted images)  
 - Clean and semantic HTML
 
-## 🗂️ Project Structure
+## 🗂 Project Structure
 
-\`\`\`
+```
 56_Name_Card_Website/
 │
 ├── static/
@@ -39,4 +39,4 @@ A simple yet elegant personal portfolio website built using **Flask** and **HTML
 │   └── index.html
 │
 └── app.py
-\`\`\`
+```
