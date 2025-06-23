@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Blog</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="../static/css/styles.css">
 </head>
@@ -12,22 +12,17 @@
         <div class="title"><h1>My Blog</h1></div>
     </div>
     <div class="content">
+        {% for blog in all_blog %}
         <div class="card">
-            <h2>Just a blog post</h2>
-            <p class="text">Lorem ipsum dolor sit </p>
+            <h2>{{ blog["title"] }}</h2>
+            <p class="text">{{ blog["subtitle"] }} </p>
             <a href="#">Read</a>
         </div>
-    </div>
-    <div class="content">
-        <div class="card">
-            <h2>Another blog post</h2>
-            <p class="text">Lorem ipsum dolor sit </p>
-            <a href="#">Read</a>
-        </div>
+        {% endfor %}
     </div>
 </div>
 </body>
 <footer>
-    <p>Made with ♥️ in USA.</p>
+    <p>Made with ♥️ in USA 🇺🇸</p>
 </footer>
 </html>
